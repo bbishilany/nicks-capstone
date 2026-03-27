@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohio Division of EMS — Capstone 1 Presentation Package</title>
+  <style>
+    :root {
+      --navy: #1B365F;
+      --navy-dark: #0F2240;
+      --red: #CE1A2B;
+      --red-hover: #A81523;
+      --gold: #D4A01E;
+      --light: #F7F8FA;
+      --border: #E2E5EA;
+      --text: #2D3748;
+      --text-light: #64748B;
+      --white: #FFFFFF;
+      --green: #16A34A;
+      --green-light: #DCFCE7;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: var(--white);
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--red);
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .hero .subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: #B0BEC5;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+    .hero .meta {
+      display: inline-flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-top: 0.5rem;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .nav-bar .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-bar a {
+      display: block;
+      padding: 0.75rem 1.25rem;
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav-bar a:hover, .nav-bar a.active {
+      color: var(--navy);
+      border-bottom-color: var(--red);
+    }
+
+    /* ===== CONTAINERS ===== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      padding: 2.5rem 0;
+    }
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .section-desc {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* ===== DOWNLOAD CARDS ===== */
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .dl-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .dl-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .dl-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .dl-icon.pptx { background: #FFF3E0; color: #E65100; }
+    .dl-icon.docx { background: #E3F2FD; color: #1565C0; }
+    .dl-icon.png  { background: #F3E5F5; color: #7B1FA2; }
+    .dl-card h3 { font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .dl-card p  { font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.6rem; }
+    .dl-card a.btn-download {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .dl-card a.btn-download:hover { background: var(--navy-dark); }
+
+    /* ===== CONTENT CARDS ===== */
+    .content-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .content-card h3 {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--red);
+      display: inline-block;
+    }
+    .content-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content-card ul li {
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+    .content-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+    .content-card ul.sub li { padding-left: 2.6rem; font-size: 0.9rem; color: var(--text-light); }
+    .content-card ul.sub li::before { left: 1.3rem; background: var(--gold); width: 5px; height: 5px; }
+
+    /* ===== OUTLINE TABLE ===== */
+    .outline-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .outline-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.65rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .outline-table td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .outline-table tr:hover td { background: #F8FAFC; }
+    .outline-table .time {
+      white-space: nowrap;
+      color: var(--red);
+      font-weight: 600;
+      width: 80px;
+    }
+    .outline-table .section-name { font-weight: 600; color: var(--navy); }
+    .outline-table ul { margin: 0.25rem 0 0 1rem; font-size: 0.85rem; color: var(--text-light); }
+
+    /* ===== TWO COLUMNS ===== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+    .col-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .col-card .col-header {
+      padding: 0.75rem 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+    .col-card .col-header.navy { background: var(--navy); }
+    .col-card .col-header.red  { background: var(--red); }
+    .col-card .col-body { padding: 1rem 1.25rem; }
+    .col-card .col-body li {
+      padding: 0.3rem 0;
+      font-size: 0.9rem;
+      list-style: disc;
+      margin-left: 1rem;
+    }
+
+    /* ===== QUIZ ===== */
+    .quiz-q {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .quiz-q h4 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+    .quiz-q .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+    @media (max-width: 600px) { .quiz-q .choices { grid-template-columns: 1fr; } }
+    .quiz-q .choice {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .quiz-q .choice:hover { border-color: var(--navy); background: #F0F4FF; }
+    .quiz-q .choice.selected { border-color: var(--navy); background: #E8EEFF; font-weight: 500; }
+    .quiz-q .choice.correct  { border-color: var(--green); background: var(--green-light); font-weight: 500; }
+    .quiz-q .choice.wrong    { border-color: var(--red); background: #FEE2E2; }
+    .quiz-q .answer {
+      display: none;
+      padding: 0.5rem 0.75rem;
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #166534;
+    }
+    .quiz-q .answer.show { display: block; }
+
+    .quiz-controls {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.7rem 2rem;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--red-hover); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.7rem 2rem;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-left: 0.5rem;
+    }
+    .btn-secondary:hover { background: var(--navy-dark); }
+
+    .score-banner {
+      display: none;
+      text-align: center;
+      padding: 1.25rem;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .score-banner.show { display: block; }
+
+    /* ===== EVALUATION ===== */
+    .eval-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .eval-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.6rem 0.75rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .eval-table th:first-child { text-align: left; min-width: 250px; }
+    .eval-table td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .eval-table td:first-child { text-align: left; }
+    .eval-table tr:hover td { background: #F8FAFC; }
+    .eval-table input[type="radio"] {
+      width: 18px; height: 18px; cursor: pointer;
+      accent-color: var(--navy);
+    }
+
+    .eval-textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    .eval-textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(27,54,95,0.1); }
+
+    .eval-label {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    /* ===== QR CODES ===== */
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .qr-item img {
+      width: 150px;
+      height: 150px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    .qr-item p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+    .qr-item .qr-url {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      word-break: break-all;
+    }
+
+    /* ===== REFERENCES ===== */
+    .ref-list {
+      list-style: none;
+      padding: 0;
+      counter-reset: ref-counter;
+    }
+    .ref-list li {
+      counter-increment: ref-counter;
+      padding: 0.5rem 0 0.5rem 2.5rem;
+      position: relative;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #F1F5F9;
+    }
+    .ref-list li::before {
+      content: '[' counter(ref-counter) ']';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .ref-list a { color: var(--navy); text-decoration: underline; }
+
+    /* ===== FEEDBACK FORM ===== */
+    .feedback-form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(27,54,95,0.1);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-success {
+      display: none;
+      padding: 1.25rem;
+      background: var(--green-light);
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      text-align: center;
+      color: #166534;
+      font-weight: 500;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy-dark);
+      color: #8899AA;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      margin-top: 2rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      .nav-bar, .hero .meta, .quiz-controls, .btn-download, .feedback-form, footer { display: none; }
+      .hero { padding: 1rem; }
+      section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <h1>The Ohio Division of EMS Website</h1>
+  <p class="subtitle">OAC Rules &amp; Resources for EMS and Fire Certification Courses</p>
+  <div class="meta">
+    <span>Capstone 1 &mdash; NFPA 1041</span>
+    <span>Fire &amp; EMS Instructor I and II</span>
+    <span>April 24, 2026</span>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav-bar">
+  <div class="inner">
+    <a href="#downloads">Downloads</a>
+    <a href="#objectives">Objectives</a>
+    <a href="#outline">Lesson Outline</a>
+    <a href="#content">Presentation</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#evaluation">Evaluation</a>
+    <a href="#references">References</a>
+    <a href="#feedback">Feedback</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ===== DOWNLOADS ===== -->
+<section id="downloads">
+  <h2 class="section-title">Download Deliverables</h2>
+  <p class="section-desc">All files ready for print or projection. Click to download.</p>
+  <div class="downloads-grid">
+    <div class="dl-card">
+      <div class="dl-icon pptx">PPT</div>
+      <div>
+        <h3>Presentation Slides</h3>
+        <p>30-slide PowerPoint &mdash; content, quiz slides, and references</p>
+        <a href="Ohio-Division-of-EMS-Presentation.pptx" class="btn-download" download>Download .pptx</a>
+      </div>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon docx">DOC</div>
+      <div>
+        <h3>Lesson Plan</h3>
+        <p>Full lesson plan covering all 8 NFPA 1041 requirements</p>
+        <a href="Lesson-Plan.docx" class="btn-download" download>Download .docx</a>
+      </div>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon docx">DOC</div>
+      <div>
+        <h3>Quiz (10 Questions)</h3>
+        <p>Multiple choice with answer key &mdash; printable handout</p>
+        <a href="Quiz-10-Questions.docx" class="btn-download" download>Download .docx</a>
+      </div>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon docx">DOC</div>
+      <div>
+        <h3>Student Evaluation Form</h3>
+        <p>14 rated criteria + 3 open-ended questions</p>
+        <a href="Student-Evaluation-Form.docx" class="btn-download" download>Download .docx</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEARNING OBJECTIVES ===== -->
+<section id="objectives">
+  <h2 class="section-title">Learning Objectives</h2>
+  <p class="section-desc">By the end of this presentation, students will be able to:</p>
+  <div class="content-card">
+    <ul>
+      <li>Identify the role and mission of the Ohio Division of EMS within the Department of Public Safety</li>
+      <li>Navigate the key sections of the ems.ohio.gov website</li>
+      <li>Describe the four EMS certification levels in Ohio (EMR, EMT, AEMT, Paramedic)</li>
+      <li>Describe the fire certification pathways (Volunteer FF, FF I, FF II, Inspector, Instructor)</li>
+      <li>Locate the Ohio Administrative Code (OAC) rules that govern EMS and fire certification</li>
+      <li>Explain the continuing education and renewal requirements for EMS and fire certifications</li>
+      <li>Use website tools to verify certifications, find training programs, and access resources</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title" style="margin-top:1.5rem">Learner Characteristics</h2>
+  <div class="content-card">
+    <ul>
+      <li>Fire &amp; EMS Instructor I and II candidates</li>
+      <li>Currently hold Firefighter I/II or EMS certifications</li>
+      <li>Adult learners with field experience in fire and/or EMS operations</li>
+      <li>Familiar with basic certification processes but may not know the full scope of the website</li>
+      <li>Comfortable with classroom instruction; varying levels of tech familiarity</li>
+      <li>Motivated to understand the regulatory framework they will teach within</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== LESSON OUTLINE ===== -->
+<section id="outline">
+  <h2 class="section-title">Lesson Outline</h2>
+  <p class="section-desc">30-minute presentation structure with timing guides.</p>
+  <div class="content-card" style="padding: 0; overflow: hidden;">
+    <table class="outline-table">
+      <thead>
+        <tr><th>Section</th><th>Time</th><th>Key Topics</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="section-name">I. Introduction &amp; Learning Objectives</td>
+          <td class="time">3 min</td>
+          <td>Topic relevance, learning objectives, learner characteristics</td>
+        </tr>
+        <tr>
+          <td class="section-name">II. What Is the Ohio Division of EMS?</td>
+          <td class="time">3 min</td>
+          <td>Dept. of Public Safety, State Board of EMFTS, key responsibilities</td>
+        </tr>
+        <tr>
+          <td class="section-name">III. Website Overview</td>
+          <td class="time">3 min</td>
+          <td>Live walkthrough of ems.ohio.gov navigation sections</td>
+        </tr>
+        <tr>
+          <td class="section-name">IV. EMS Certification Levels</td>
+          <td class="time">5 min</td>
+          <td>EMR, EMT, AEMT, Paramedic &mdash; OAC chapters, scope of practice</td>
+        </tr>
+        <tr>
+          <td class="section-name">V. Fire Certification Pathways</td>
+          <td class="time">5 min</td>
+          <td>Vol. FF, FF I (160 hrs), FF I&amp;II (244 hrs), Inspector, Instructor, Live Fire</td>
+        </tr>
+        <tr>
+          <td class="section-name">VI. OAC Rules Governing Certification</td>
+          <td class="time">3 min</td>
+          <td>Chapters 4765-12 through 4765-25, how to find rules on codes.ohio.gov</td>
+        </tr>
+        <tr>
+          <td class="section-name">VII. Continuing Education &amp; Renewal</td>
+          <td class="time">3 min</td>
+          <td>CE hours by level, renewal options, Testing in Lieu of CE</td>
+        </tr>
+        <tr>
+          <td class="section-name">VIII. Additional Website Resources</td>
+          <td class="time">2 min</td>
+          <td>Verification tool, OFOTS, training directory, trauma system, grants</td>
+        </tr>
+        <tr>
+          <td class="section-name">IX. Summary &amp; Key Takeaways</td>
+          <td class="time">2 min</td>
+          <td>Recap learning objectives, emphasize ems.ohio.gov as primary resource</td>
+        </tr>
+        <tr>
+          <td class="section-name">X. Quiz</td>
+          <td class="time">5 min</td>
+          <td>10 multiple-choice questions with class review</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== FULL PRESENTATION CONTENT ===== -->
+<section id="content">
+  <h2 class="section-title">Presentation Content</h2>
+  <p class="section-desc">Full content from each slide section, for review and reference.</p>
+
+  <!-- Division of EMS -->
+  <div class="content-card">
+    <h3>What Is the Ohio Division of EMS?</h3>
+    <ul>
+      <li>Part of the Ohio Department of Public Safety</li>
+      <li>Administrative arm of the State Board of Emergency Medical, Fire, and Transportation Services (EMFTS)</li>
+      <li>Located at 1970 W. Broad Street, Columbus, OH 43223</li>
+      <li>Key responsibilities:</li>
+    </ul>
+    <ul class="sub">
+      <li>Certification of EMS and fire service providers and instructors</li>
+      <li>Accreditation and chartering of EMS and fire training institutions</li>
+      <li>Approval of EMS continuing education sites</li>
+      <li>Regulation of medical transportation services</li>
+      <li>Lead agency for Ohio's trauma system</li>
+    </ul>
+  </div>
+
+  <!-- Website Overview -->
+  <div class="content-card">
+    <h3>Website Overview &mdash; ems.ohio.gov</h3>
+    <ul>
+      <li>The central hub for all EMS and fire certification information in Ohio</li>
+      <li>Main navigation sections:</li>
+    </ul>
+    <ul class="sub">
+      <li>Certifications (initial, renewal, reinstatement, reciprocity, verification)</li>
+      <li>Education &amp; Testing (training facilities, CE requirements, testing options)</li>
+      <li>Programs &amp; Services (trauma system, grants, community resources)</li>
+      <li>About Us (State Board info, newsroom, policies, strategic plan)</li>
+      <li>Help Center (agency directory, forms, contact info)</li>
+    </ul>
+    <ul>
+      <li>Also hosts downloadable course packets, OAC rule references, and scope of practice documents</li>
+    </ul>
+  </div>
+
+  <!-- EMS Certification Levels -->
+  <div class="content-card">
+    <h3>EMS Certification Levels in Ohio</h3>
+    <ul>
+      <li><strong>Emergency Medical Responder (EMR)</strong> &mdash; OAC 4765-12 &mdash; Entry-level; basic emergency care and CPR</li>
+      <li><strong>Emergency Medical Technician (EMT)</strong> &mdash; OAC 4765-15 &mdash; BLS care, patient assessment, medication administration</li>
+      <li><strong>Advanced EMT (AEMT)</strong> &mdash; OAC 4765-16 &mdash; IV access, advanced airway management, select medications</li>
+      <li><strong>Paramedic</strong> &mdash; OAC 4765-17 &mdash; Full ALS care, cardiac monitoring, drug administration, intubation (min. 500 hrs didactic/lab + 400 hrs clinical/field)</li>
+    </ul>
+  </div>
+
+  <!-- Fire Certification Pathways -->
+  <div class="two-col">
+    <div class="col-card">
+      <div class="col-header navy">Firefighter Certifications</div>
+      <div class="col-body">
+        <ul>
+          <li><strong>Volunteer Firefighter</strong> &mdash; State minimum for volunteer service</li>
+          <li><strong>Firefighter I</strong> &mdash; 160-hour course; NFPA 1001</li>
+          <li><strong>Firefighter I &amp; II</strong> &mdash; 244-hour combined course</li>
+          <li><strong>Firefighter II Transition</strong> &mdash; 84 hours (existing FF I holders)</li>
+          <li>All courses through Ohio chartered fire training programs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-card">
+      <div class="col-header red">Specialty Certifications</div>
+      <div class="col-body">
+        <ul>
+          <li><strong>Fire Safety Inspector</strong> &mdash; Code enforcement and inspection</li>
+          <li><strong>Fire &amp; EMS Instructor I</strong> &mdash; Classroom instruction qualification</li>
+          <li><strong>Fire &amp; EMS Instructor II</strong> &mdash; Course design and program management</li>
+          <li><strong>Live Fire Instructor</strong> &mdash; Required for live fire training</li>
+          <li><strong>Hazard Recognition Officer</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fire Instructor Requirements -->
+  <div class="content-card" style="margin-top: 1.5rem;">
+    <h3>Fire Instructor Certification &mdash; OAC 4765-21</h3>
+    <ul>
+      <li>Prerequisites &mdash; must hold valid firefighter certification</li>
+      <li>Complete a fire instructor training course (minimum 60 hours)</li>
+    </ul>
+    <ul class="sub">
+      <li>Includes 4-hour fire service training module</li>
+      <li>Includes 4-hour live fire training awareness module</li>
+      <li>From the "Ohio Fire and EMS Instructor Curriculum"</li>
+    </ul>
+    <ul>
+      <li>Pass the fire instructor knowledge examination</li>
+      <li>Pass the instructional methods examination</li>
+      <li>Complete 10 hours of supervised teaching (min. 6 hrs classroom + up to 4 hrs practical)</li>
+      <li>Course provided under accredited/chartered training program, taught by Instructor II</li>
+    </ul>
+  </div>
+
+  <!-- Key OAC Chapters -->
+  <div class="content-card">
+    <h3>Key OAC Chapters &mdash; Title 4765</h3>
+    <ul>
+      <li><strong>OAC 4765-12</strong> &mdash; Emergency Medical Responder certification</li>
+      <li><strong>OAC 4765-15</strong> &mdash; EMT certification</li>
+      <li><strong>OAC 4765-16</strong> &mdash; Advanced EMT certification</li>
+      <li><strong>OAC 4765-17</strong> &mdash; Paramedic certification</li>
+      <li><strong>OAC 4765-18</strong> &mdash; Fire and emergency services courses (FF I, FF II, Inspector)</li>
+      <li><strong>OAC 4765-20</strong> &mdash; Certification renewal and continuing education</li>
+      <li><strong>OAC 4765-21</strong> &mdash; Instructor certification (Instructor I, II, CE Instructor)</li>
+      <li><strong>OAC 4765-24</strong> &mdash; Fire service courses (additional requirements)</li>
+      <li><strong>OAC 4765-25</strong> &mdash; Definitions (incorporated standards by reference)</li>
+    </ul>
+  </div>
+
+  <!-- CE & Renewal -->
+  <div class="two-col">
+    <div class="col-card">
+      <div class="col-header navy">EMS CE Requirements</div>
+      <div class="col-body">
+        <ul>
+          <li><strong>EMR:</strong> 16 hours of CE per cycle</li>
+          <li><strong>EMT:</strong> 40 hours of CE per cycle</li>
+          <li><strong>AEMT:</strong> 50 hours of CE per cycle</li>
+          <li><strong>Paramedic:</strong> 60 hours of CE per cycle</li>
+          <li>Testing in Lieu of CE option (NREMT exam)</li>
+          <li>Ohio refresher course option</li>
+          <li>Maintain current NREMT registration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-card">
+      <div class="col-header red">Fire Instructor Renewal</div>
+      <div class="col-body">
+        <ul>
+          <li><strong>&lt;12 months:</strong> No CE or instruction required</li>
+          <li><strong>12-24 months:</strong> 2 hrs CE + 8 hrs instruction</li>
+          <li><strong>24-36 months:</strong> 4 hrs CE + 16 hrs instruction</li>
+          <li>Submit renewal application before expiration</li>
+          <li>Comply with firefighter cert requirements</li>
+          <li>Hours approved by fire chief or program director</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website Tools -->
+  <div class="content-card" style="margin-top: 1.5rem;">
+    <h3>Website Tools &amp; Resources</h3>
+    <ul>
+      <li><strong>Certification Verification</strong> &mdash; look up any Ohio EMS/fire provider's cert status</li>
+      <li><strong>Ohio Fire Online Training Service (OFOTS)</strong> &mdash; 200+ online courses including 70+ fire protection courses</li>
+      <li><strong>Training Facility Directory</strong> &mdash; find accredited/chartered programs statewide</li>
+      <li><strong>Agency Directory</strong> &mdash; contact info for regional EMS agencies</li>
+      <li><strong>Downloadable Course Packets</strong> &mdash; FF I, FF II, Transition, Inspector</li>
+      <li><strong>Scope of Practice documents</strong> &mdash; downloadable PDFs for each EMS level</li>
+      <li><strong>Newsroom</strong> &mdash; regulatory updates (e.g., new Ohio Fire Code, Nov. 2025)</li>
+    </ul>
+  </div>
+
+  <!-- Programs & Services -->
+  <div class="content-card">
+    <h3>Programs &amp; Services</h3>
+    <ul>
+      <li><strong>Trauma System</strong> &mdash; Division of EMS is the lead agency; trauma/burn center directory on site</li>
+      <li><strong>Ohio Trauma Triage Pro</strong> &mdash; mobile app for field triage decisions</li>
+      <li><strong>Naloxone Information</strong> &mdash; resources for opioid overdose response</li>
+      <li><strong>Grants</strong> &mdash; funding opportunities for EMS agencies and training</li>
+      <li><strong>Community Resources</strong> &mdash; public education and outreach materials</li>
+      <li><strong>EMS/Trauma Data Requests</strong> &mdash; data for research and planning</li>
+      <li><strong>Complaint Form</strong> &mdash; public reporting mechanism for provider issues</li>
+      <li><strong>EMFTS Strategic Plan</strong> &mdash; long-term goals for Ohio EMS and fire services</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== INTERACTIVE QUIZ ===== -->
+<section id="quiz">
+  <h2 class="section-title">Quiz &mdash; Test Your Knowledge</h2>
+  <p class="section-desc">10 multiple-choice questions. Select your answers, then click "Check Answers" to see your score.</p>
+
+  <div id="scoreBanner" class="score-banner"></div>
+
+  <div id="quizContainer">
+    <!-- Q1 -->
+    <div class="quiz-q" data-correct="1">
+      <h4>1. The Ohio Division of EMS is part of which state department?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) Ohio Department of Health</div>
+        <div class="choice" data-idx="1">B) Ohio Department of Public Safety</div>
+        <div class="choice" data-idx="2">C) Ohio Department of Education</div>
+        <div class="choice" data-idx="3">D) Ohio Department of Commerce</div>
+      </div>
+      <div class="answer">B) Ohio Department of Public Safety</div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>2. How many EMS certification levels does Ohio recognize?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) Two (EMT and Paramedic)</div>
+        <div class="choice" data-idx="1">B) Three (EMR, EMT, Paramedic)</div>
+        <div class="choice" data-idx="2">C) Four (EMR, EMT, AEMT, Paramedic)</div>
+        <div class="choice" data-idx="3">D) Five (FR, EMR, EMT, AEMT, Paramedic)</div>
+      </div>
+      <div class="answer">C) Four (EMR, EMT, AEMT, Paramedic)</div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>3. How many training hours are required for a Firefighter I course?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) 84 hours</div>
+        <div class="choice" data-idx="1">B) 120 hours</div>
+        <div class="choice" data-idx="2">C) 160 hours</div>
+        <div class="choice" data-idx="3">D) 244 hours</div>
+      </div>
+      <div class="answer">C) 160 hours</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>4. What OAC chapter governs fire instructor certification?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) OAC 4765-15</div>
+        <div class="choice" data-idx="1">B) OAC 4765-18</div>
+        <div class="choice" data-idx="2">C) OAC 4765-21</div>
+        <div class="choice" data-idx="3">D) OAC 4765-25</div>
+      </div>
+      <div class="answer">C) OAC 4765-21</div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="quiz-q" data-correct="1">
+      <h4>5. How many CE hours must an EMT complete per renewal cycle?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) 16 hours</div>
+        <div class="choice" data-idx="1">B) 40 hours</div>
+        <div class="choice" data-idx="2">C) 50 hours</div>
+        <div class="choice" data-idx="3">D) 60 hours</div>
+      </div>
+      <div class="answer">B) 40 hours</div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="quiz-q" data-correct="3">
+      <h4>6. What is the minimum number of supervised teaching hours required for fire instructor certification?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) 4 hours</div>
+        <div class="choice" data-idx="1">B) 6 hours</div>
+        <div class="choice" data-idx="2">C) 8 hours</div>
+        <div class="choice" data-idx="3">D) 10 hours</div>
+      </div>
+      <div class="answer">D) 10 hours (minimum 6 hrs classroom + up to 4 hrs practical)</div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>7. Which organization develops and administers the Testing in Lieu of CE exams?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) Ohio Division of EMS</div>
+        <div class="choice" data-idx="1">B) NFPA</div>
+        <div class="choice" data-idx="2">C) National Registry of EMTs (NREMT)</div>
+        <div class="choice" data-idx="3">D) State Board of EMFTS</div>
+      </div>
+      <div class="answer">C) National Registry of EMTs (NREMT)</div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>8. A combined Firefighter I and II course requires how many total hours?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) 160 hours</div>
+        <div class="choice" data-idx="1">B) 200 hours</div>
+        <div class="choice" data-idx="2">C) 244 hours</div>
+        <div class="choice" data-idx="3">D) 300 hours</div>
+      </div>
+      <div class="answer">C) 244 hours</div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>9. The fire instructor training course requires a minimum of how many hours?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) 36 hours</div>
+        <div class="choice" data-idx="1">B) 48 hours</div>
+        <div class="choice" data-idx="2">C) 60 hours</div>
+        <div class="choice" data-idx="3">D) 80 hours</div>
+      </div>
+      <div class="answer">C) 60 hours</div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="quiz-q" data-correct="2">
+      <h4>10. What is the official website for the Ohio Division of EMS?</h4>
+      <div class="choices">
+        <div class="choice" data-idx="0">A) ems.state.oh.us</div>
+        <div class="choice" data-idx="1">B) ohioems.gov</div>
+        <div class="choice" data-idx="2">C) ems.ohio.gov</div>
+        <div class="choice" data-idx="3">D) dps.ohio.gov/ems</div>
+      </div>
+      <div class="answer">C) ems.ohio.gov</div>
+    </div>
+  </div>
+
+  <div class="quiz-controls">
+    <button class="btn-primary" onclick="checkQuiz()">Check Answers</button>
+    <button class="btn-secondary" onclick="resetQuiz()">Reset</button>
+  </div>
+</section>
+
+<!-- ===== STUDENT EVALUATION ===== -->
+<section id="evaluation">
+  <h2 class="section-title">Student Evaluation Form</h2>
+  <p class="section-desc">Rate the presentation on a scale of 1 (Poor) to 5 (Excellent).</p>
+
+  <form id="evalForm">
+    <div class="content-card">
+      <h3>Content &amp; Organization</h3>
+      <table class="eval-table">
+        <thead><tr><th>Criteria</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Learning objectives were clearly stated</td><td><input type="radio" name="e1" value="1"></td><td><input type="radio" name="e1" value="2"></td><td><input type="radio" name="e1" value="3"></td><td><input type="radio" name="e1" value="4"></td><td><input type="radio" name="e1" value="5"></td></tr>
+          <tr><td>Content was well-organized and easy to follow</td><td><input type="radio" name="e2" value="1"></td><td><input type="radio" name="e2" value="2"></td><td><input type="radio" name="e2" value="3"></td><td><input type="radio" name="e2" value="4"></td><td><input type="radio" name="e2" value="5"></td></tr>
+          <tr><td>Material was relevant to EMS/Fire certification</td><td><input type="radio" name="e3" value="1"></td><td><input type="radio" name="e3" value="2"></td><td><input type="radio" name="e3" value="3"></td><td><input type="radio" name="e3" value="4"></td><td><input type="radio" name="e3" value="5"></td></tr>
+          <tr><td>Sufficient detail was provided on the topic</td><td><input type="radio" name="e4" value="1"></td><td><input type="radio" name="e4" value="2"></td><td><input type="radio" name="e4" value="3"></td><td><input type="radio" name="e4" value="4"></td><td><input type="radio" name="e4" value="5"></td></tr>
+          <tr><td>Key OAC rules and website sections were covered</td><td><input type="radio" name="e5" value="1"></td><td><input type="radio" name="e5" value="2"></td><td><input type="radio" name="e5" value="3"></td><td><input type="radio" name="e5" value="4"></td><td><input type="radio" name="e5" value="5"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-card">
+      <h3>Delivery &amp; Presentation Skills</h3>
+      <table class="eval-table">
+        <thead><tr><th>Criteria</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Instructor spoke clearly and at an appropriate pace</td><td><input type="radio" name="e6" value="1"></td><td><input type="radio" name="e6" value="2"></td><td><input type="radio" name="e6" value="3"></td><td><input type="radio" name="e6" value="4"></td><td><input type="radio" name="e6" value="5"></td></tr>
+          <tr><td>Eye contact and engagement with the audience</td><td><input type="radio" name="e7" value="1"></td><td><input type="radio" name="e7" value="2"></td><td><input type="radio" name="e7" value="3"></td><td><input type="radio" name="e7" value="4"></td><td><input type="radio" name="e7" value="5"></td></tr>
+          <tr><td>Effective use of visual aids (slides, website demo)</td><td><input type="radio" name="e8" value="1"></td><td><input type="radio" name="e8" value="2"></td><td><input type="radio" name="e8" value="3"></td><td><input type="radio" name="e8" value="4"></td><td><input type="radio" name="e8" value="5"></td></tr>
+          <tr><td>Instructor demonstrated knowledge of the subject</td><td><input type="radio" name="e9" value="1"></td><td><input type="radio" name="e9" value="2"></td><td><input type="radio" name="e9" value="3"></td><td><input type="radio" name="e9" value="4"></td><td><input type="radio" name="e9" value="5"></td></tr>
+          <tr><td>Time was managed well within 30 minutes</td><td><input type="radio" name="e10" value="1"></td><td><input type="radio" name="e10" value="2"></td><td><input type="radio" name="e10" value="3"></td><td><input type="radio" name="e10" value="4"></td><td><input type="radio" name="e10" value="5"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-card">
+      <h3>Instructional Materials</h3>
+      <table class="eval-table">
+        <thead><tr><th>Criteria</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Slides were professional and easy to read</td><td><input type="radio" name="e11" value="1"></td><td><input type="radio" name="e11" value="2"></td><td><input type="radio" name="e11" value="3"></td><td><input type="radio" name="e11" value="4"></td><td><input type="radio" name="e11" value="5"></td></tr>
+          <tr><td>Website demonstration was helpful and relevant</td><td><input type="radio" name="e12" value="1"></td><td><input type="radio" name="e12" value="2"></td><td><input type="radio" name="e12" value="3"></td><td><input type="radio" name="e12" value="4"></td><td><input type="radio" name="e12" value="5"></td></tr>
+          <tr><td>Handouts/quiz were appropriate and useful</td><td><input type="radio" name="e13" value="1"></td><td><input type="radio" name="e13" value="2"></td><td><input type="radio" name="e13" value="3"></td><td><input type="radio" name="e13" value="4"></td><td><input type="radio" name="e13" value="5"></td></tr>
+          <tr><td>Sources and references were properly cited</td><td><input type="radio" name="e14" value="1"></td><td><input type="radio" name="e14" value="2"></td><td><input type="radio" name="e14" value="3"></td><td><input type="radio" name="e14" value="4"></td><td><input type="radio" name="e14" value="5"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-card">
+      <h3>Additional Feedback</h3>
+      <label class="eval-label">What was the most valuable thing you learned?</label>
+      <textarea class="eval-textarea" name="feedback1" placeholder="Your response..."></textarea>
+      <label class="eval-label">What could the instructor improve?</label>
+      <textarea class="eval-textarea" name="feedback2" placeholder="Your response..."></textarea>
+      <label class="eval-label">Additional comments or suggestions?</label>
+      <textarea class="eval-textarea" name="feedback3" placeholder="Your response..."></textarea>
+    </div>
+
+    <div class="quiz-controls">
+      <button type="submit" class="btn-primary">Submit Evaluation</button>
+    </div>
+    <div id="evalSuccess" class="form-success">
+      Thank you! Your evaluation has been submitted successfully.
+    </div>
+  </form>
+</section>
+
+<!-- ===== QR CODES ===== -->
+<section id="qrcodes">
+  <h2 class="section-title">QR Codes</h2>
+  <p class="section-desc">Print these or display on screen for quick audience access.</p>
+  <div class="qr-grid">
+    <div class="qr-item">
+      <img src="QR-ems-ohio-gov.png" alt="QR code for ems.ohio.gov">
+      <p>Ohio Division of EMS</p>
+      <span class="qr-url">ems.ohio.gov</span>
+    </div>
+    <div class="qr-item">
+      <img src="QR-oac-4765.png" alt="QR code for OAC Chapter 4765">
+      <p>OAC Chapter 4765</p>
+      <span class="qr-url">codes.ohio.gov/oac/4765</span>
+    </div>
+    <div class="qr-item">
+      <img src="QR-cert-verification.png" alt="QR code for Cert Verification">
+      <p>Cert Verification Tool</p>
+      <span class="qr-url">services.dps.ohio.gov</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REFERENCES ===== -->
+<section id="references">
+  <h2 class="section-title">References</h2>
+  <p class="section-desc">All sources cited in this presentation.</p>
+  <div class="content-card">
+    <ol class="ref-list">
+      <li>Ohio Division of EMS. (n.d.). <em>Ohio Emergency Medical Services.</em> <a href="https://ems.ohio.gov" target="_blank">https://ems.ohio.gov</a></li>
+      <li>Ohio Administrative Code, Title 4765. <em>Ohio Laws and Administrative Rules.</em> <a href="https://codes.ohio.gov/ohio-administrative-code/chapter-4765" target="_blank">https://codes.ohio.gov/ohio-administrative-code/chapter-4765</a></li>
+      <li>Ohio Division of EMS. (n.d.). <em>Testing in Lieu of CE.</em> <a href="https://ems.ohio.gov/education-and-testing/testing-in-lieu-of-ce" target="_blank">https://ems.ohio.gov/education-and-testing/testing-in-lieu-of-ce</a></li>
+      <li>Ohio Division of EMS. (n.d.). <em>Firefighter I and II Course Packet.</em> <a href="https://dam.assets.ohio.gov/image/upload/ems.ohio.gov/links/ems0315.pdf" target="_blank">https://dam.assets.ohio.gov/.../ems0315.pdf</a></li>
+      <li>Ohio Division of EMS. (n.d.). <em>Firefighter II Transition Course Packet.</em> <a href="https://dam.assets.ohio.gov/image/upload/ems.ohio.gov/links/ems0308.pdf" target="_blank">https://dam.assets.ohio.gov/.../ems0308.pdf</a></li>
+      <li>Ohio Dept. of Public Safety. (n.d.). <em>EMS and Fire Provider Verification.</em> <a href="https://services.dps.ohio.gov/EMSProviders/Verification" target="_blank">https://services.dps.ohio.gov/EMSProviders/Verification</a></li>
+      <li>Ohio Fire Online Training Service. (n.d.). <em>OFOTS.</em> <a href="https://ofots.com" target="_blank">https://ofots.com</a></li>
+      <li>National Registry of EMTs. (n.d.). <em>Ohio DPS/Division of EMS.</em> <a href="https://www.nremt.org/resources/state-ems-offices/OH" target="_blank">https://www.nremt.org/resources/state-ems-offices/OH</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== FEEDBACK ===== -->
+<section id="feedback">
+  <h2 class="section-title">Feedback for Nick</h2>
+  <p class="section-desc">Review the materials and leave any comments, suggestions, or corrections.</p>
+  <div class="feedback-form">
+    <form id="feedbackForm" action="https://formspree.io/f/placeholder" method="POST">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Optional" />
+      </div>
+      <div class="form-group">
+        <label>Overall Impression</label>
+        <textarea name="message" placeholder="How does the presentation look? Any content to add, remove, or change? Any errors spotted? General thoughts..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Specific Slide/Section Feedback</label>
+        <textarea name="specifics" placeholder="E.g., 'Slide 8 — maybe add more detail on FF II Transition' or 'Quiz Q3 — double-check the hours'"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Feedback</button>
+    </form>
+    <div id="feedbackSuccess" class="form-success">
+      Feedback sent! Thank you for the review.
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<footer>
+  <p>Ohio Division of EMS Capstone 1 &mdash; NFPA 1041 &mdash; Fire &amp; EMS Instructor I and II</p>
+  <p style="margin-top:0.5rem">Built for presentation prep &mdash; <a href="https://ems.ohio.gov" target="_blank">ems.ohio.gov</a></p>
+</footer>
+
+<script>
+// ===== STICKY NAV ACTIVE STATE =====
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-bar a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 80;
+    if (window.scrollY >= top) current = section.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+});
+
+// ===== QUIZ LOGIC =====
+document.querySelectorAll('.quiz-q .choice').forEach(choice => {
+  choice.addEventListener('click', function() {
+    const q = this.closest('.quiz-q');
+    q.querySelectorAll('.choice').forEach(c => c.classList.remove('selected','correct','wrong'));
+    this.classList.add('selected');
+  });
+});
+
+function checkQuiz() {
+  let score = 0;
+  const questions = document.querySelectorAll('.quiz-q');
+  questions.forEach(q => {
+    const correct = parseInt(q.dataset.correct);
+    const selected = q.querySelector('.choice.selected');
+    q.querySelectorAll('.choice').forEach(c => c.classList.remove('correct','wrong'));
+
+    if (selected) {
+      const idx = parseInt(selected.dataset.idx);
+      if (idx === correct) {
+        selected.classList.add('correct');
+        score++;
+      } else {
+        selected.classList.add('wrong');
+        q.querySelectorAll('.choice')[correct].classList.add('correct');
+      }
+    } else {
+      q.querySelectorAll('.choice')[correct].classList.add('correct');
+    }
+    q.querySelector('.answer').classList.add('show');
+  });
+
+  const banner = document.getElementById('scoreBanner');
+  banner.textContent = `Score: ${score} / ${questions.length} (${Math.round(score/questions.length*100)}%)`;
+  banner.classList.add('show');
+  banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetQuiz() {
+  document.querySelectorAll('.quiz-q .choice').forEach(c => c.classList.remove('selected','correct','wrong'));
+  document.querySelectorAll('.quiz-q .answer').forEach(a => a.classList.remove('show'));
+  document.getElementById('scoreBanner').classList.remove('show');
+}
+
+// ===== EVALUATION FORM =====
+document.getElementById('evalForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('evalSuccess').style.display = 'block';
+  this.style.opacity = '0.5';
+  setTimeout(() => {
+    this.style.opacity = '1';
+    document.getElementById('evalSuccess').style.display = 'none';
+  }, 4000);
+});
+
+// ===== FEEDBACK FORM =====
+document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // For now, show success message. Formspree endpoint can be added later.
+  document.getElementById('feedbackSuccess').style.display = 'block';
+  this.reset();
+  setTimeout(() => {
+    document.getElementById('feedbackSuccess').style.display = 'none';
+  }, 4000);
+});
+</script>
+
+</body>
+</html>
