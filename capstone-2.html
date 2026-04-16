@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone 02 &mdash; Initial Fire Engineer / Pump Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body class="theme-orange">
+
+<!-- ===== FIXED HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-brand">Mileage Design</span>
+      <span class="logo-sub">Capstone 02</span>
+    </div>
+    <a href="index.html" class="header-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      All Capstones
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Capstone 02 &mdash; NFPA 1002
+    </div>
+    <h1>Initial Fire Engineer<br><span>Pump Operations</span></h1>
+    <p class="hero-sub">Truck Checks, Driving with Due Regard, Hydrant Hookup, Apparatus Placement, and Pump Engagement</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        45-Minute Presentation
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Due April 28, 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>
+        Driver / Operator Candidates
+      </div>
+    </div>
+  </div>
+  <div class="hero-accent"></div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#downloads">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      Downloads
+    </a>
+    <a href="#objectives">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      Objectives
+    </a>
+    <a href="#outline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      Outline
+    </a>
+    <a href="#content">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Slides
+    </a>
+    <a href="#quiz">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+      Quiz
+    </a>
+    <a href="#evaluation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      Evaluation
+    </a>
+    <a href="#references">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      References
+    </a>
+    <a href="#feedback">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Feedback
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ===== DOWNLOADS ===== -->
+<section id="downloads" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      Deliverables
+    </div>
+    <h2 class="section-title">Download Files</h2>
+    <p class="section-desc">All files ready for print or projection.</p>
+  </div>
+  <div class="dl-grid">
+    <div class="card dl-card">
+      <div class="dl-accent pptx"></div>
+      <div class="dl-body">
+        <div class="dl-icon pptx">PPTX</div>
+        <div class="dl-info">
+          <h3>Presentation Slides</h3>
+          <p>Slide deck covering apparatus, pump, and driver/operator duties</p>
+        </div>
+        <a href="capstone-2/Initial-Fire-Engineer-Pump-Operations.pptx" class="dl-btn" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download
+        </a>
+      </div>
+    </div>
+    <div class="card dl-card">
+      <div class="dl-accent docx-blue"></div>
+      <div class="dl-body">
+        <div class="dl-icon docx-blue">DOCX</div>
+        <div class="dl-info">
+          <h3>Lesson Plan</h3>
+          <p>45-minute lesson plan aligned to NFPA 1002 Chapters 4 &amp; 5</p>
+        </div>
+        <a href="capstone-2/Lesson-Plan.docx" class="dl-btn" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download
+        </a>
+      </div>
+    </div>
+    <div class="card dl-card">
+      <div class="dl-accent docx-green"></div>
+      <div class="dl-body">
+        <div class="dl-icon docx-green">DOCX</div>
+        <div class="dl-info">
+          <h3>Quiz &mdash; 10 Questions</h3>
+          <p>Multiple choice with separate answer key page</p>
+        </div>
+        <a href="capstone-2/Quiz-10-Questions.docx" class="dl-btn" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download
+        </a>
+      </div>
+    </div>
+    <div class="card dl-card">
+      <div class="dl-accent docx-purple"></div>
+      <div class="dl-body">
+        <div class="dl-icon docx-purple">DOCX</div>
+        <div class="dl-info">
+          <h3>Student Evaluation Form</h3>
+          <p>14 rated criteria + 3 open-ended feedback questions</p>
+        </div>
+        <a href="capstone-2/Student-Evaluation-Form.docx" class="dl-btn" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== LEARNING OBJECTIVES ===== -->
+<section id="objectives" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      Learning Goals
+    </div>
+    <h2 class="section-title">Learning Objectives</h2>
+    <p class="section-desc">By the end of this presentation, students will be able to:</p>
+  </div>
+  <div class="obj-grid">
+    <div class="obj-item"><div class="obj-num">1</div><p>Describe the responsibilities of the apparatus driver/operator under NFPA 1002</p></div>
+    <div class="obj-item"><div class="obj-num">2</div><p>Perform a daily/shift apparatus check and document deficiencies</p></div>
+    <div class="obj-item"><div class="obj-num">3</div><p>Operate a fire apparatus with due regard, applying state and department driving laws</p></div>
+    <div class="obj-item"><div class="obj-num">4</div><p>Identify hydrant types (Storz vs threaded) and execute a forward and reverse lay</p></div>
+    <div class="obj-item"><div class="obj-num">5</div><p>Position the apparatus to maximize crew safety, scene access, and water supply</p></div>
+    <div class="obj-item"><div class="obj-num">6</div><p>Engage the pump, set pressure, and supply attack lines from tank or hydrant</p></div>
+    <div class="obj-item"><div class="obj-num">7</div><p>Carry out the secondary duties of the engineer &mdash; lighting, ladders, tools, SCBA bottles, hydration, and backup lines &mdash; while serving as command's situational eyes</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== LESSON OUTLINE ===== -->
+<section id="outline" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      Lesson Plan
+    </div>
+    <h2 class="section-title">45-Minute Outline</h2>
+  </div>
+  <div class="card outline-card">
+    <div class="outline-row"><div class="outline-num">I</div><div class="outline-section"><h4>Introduction &amp; The Engineer's Role</h4><p>Why the driver/operator position matters; NFPA 1002 scope; "first one on, last one off"</p></div><div class="outline-time">3 min</div></div>
+    <div class="outline-row"><div class="outline-num">II</div><div class="outline-section"><h4>Daily Apparatus Check</h4><p>Walk-around, fluids, lights, tires, air, pump primer, tank levels, equipment inventory, OOS reporting</p></div><div class="outline-time">5 min</div></div>
+    <div class="outline-row"><div class="outline-num">III</div><div class="outline-section"><h4>Crew Responsibilities Before Rolling</h4><p>Officer / FF1 / FF2 assignments, riding positions, seatbelts, SCBA donning, accountability tags</p></div><div class="outline-time">3 min</div></div>
+    <div class="outline-row"><div class="outline-num">IV</div><div class="outline-section"><h4>Driving with Due Regard</h4><p>ORC 4511.03 / 4511.041, Code 3 vs Code 1, intersections, weight transfer, backing, governor &amp; retarder use</p></div><div class="outline-time">5 min</div></div>
+    <div class="outline-row"><div class="outline-num">V</div><div class="outline-section"><h4>Communication &amp; Radio Awareness</h4><p>Enroute traffic, on-scene size-up, mutual aid channel, command updates, water-supply marking</p></div><div class="outline-time">3 min</div></div>
+    <div class="outline-row"><div class="outline-num">VI</div><div class="outline-section"><h4>Hydrant Spotting &amp; Hookup</h4><p>Forward vs reverse lay, Storz quarter-turn, threaded NST, hydrant wrench technique, soft sleeve placement</p></div><div class="outline-time">5 min</div></div>
+    <div class="outline-row"><div class="outline-num">VII</div><div class="outline-section"><h4>Apparatus Placement</h4><p>Hydrant clearance, 25-ft offset for tactical advantage, collapse zones, overhead hazards, EV egress</p></div><div class="outline-time">4 min</div></div>
+    <div class="outline-row"><div class="outline-num">VIII</div><div class="outline-section"><h4>Pump Engagement &amp; Pressure Management</h4><p>Tank-to-pump, transfer to hydrant, throttle vs governor, friction loss math, gating multiple lines</p></div><div class="outline-time">5 min</div></div>
+    <div class="outline-row"><div class="outline-num">IX</div><div class="outline-section"><h4>Generator, Lighting, &amp; Secondary Duties</h4><p>Scene lighting, ladder throws, tool prep, SCBA bottle swaps, hydration, salt/shovel, backup hose lines</p></div><div class="outline-time">5 min</div></div>
+    <div class="outline-row"><div class="outline-num">X</div><div class="outline-section"><h4>Pump Operator as Command's Eyes</h4><p>360 awareness, smoke/fire behavior reporting, water-supply forecasting, MAYDAY readiness</p></div><div class="outline-time">3 min</div></div>
+    <div class="outline-row"><div class="outline-num">XI</div><div class="outline-section"><h4>Quiz &amp; Wrap-Up</h4><p>10 multiple-choice questions with class review</p></div><div class="outline-time">4 min</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SLIDE CONTENT ===== -->
+<section id="content" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Presentation
+    </div>
+    <h2 class="section-title">Slide Content</h2>
+    <p class="section-desc">Full content from each section for review and reference.</p>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>The Engineer's Role &mdash; NFPA 1002</h3>
+      <ul>
+        <li><strong>NFPA 1002</strong> is the standard for Fire Apparatus Driver/Operator Professional Qualifications</li>
+        <li>The driver/operator (DO) is responsible for the safe transport, positioning, and pump operation of the apparatus</li>
+        <li>The DO is on the rig before the call &mdash; and stays with it until the rig is back in quarters and ready for the next response</li>
+        <li>Two NFPA 1002 chapters frame the position:</li>
+      </ul>
+      <ul class="sub-list">
+        <li><strong>Chapter 4</strong> &mdash; General Requirements: inspection, maintenance, driving, backing, defensive driving</li>
+        <li><strong>Chapter 5</strong> &mdash; Pump Operations: tank, hydrant, drafting, relay, pressure management</li>
+      </ul>
+      <ul>
+        <li>The DO is judged less on speed and more on consistency &mdash; the rig that doesn't crash and the line that doesn't lose pressure</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Daily Apparatus Check</h3>
+      <ul>
+        <li>Conducted at shift change &mdash; signed off in the apparatus log</li>
+        <li>Walk-around (clockwise from driver door):</li>
+      </ul>
+      <ul class="sub-list">
+        <li>Body damage, mirrors, lights (low/high beam, brake, turn, scene, warning)</li>
+        <li>Tires &mdash; tread depth, sidewall, lug nut indicators, valve caps, air pressure</li>
+        <li>Compartments &mdash; latched, inventoried, equipment secured</li>
+      </ul>
+      <ul>
+        <li>Engine bay &mdash; oil, coolant, power steering, washer fluid, belts, hoses</li>
+        <li>Cab &mdash; SCBA seats charged, MDT/radio responsive, emergency lighting cycle test</li>
+        <li>Pump panel &mdash; primer cycle, tank-to-pump, gate valves, intake/discharge caps, water level</li>
+        <li>Air system &mdash; build to governor, leak-down test, low-air warning</li>
+        <li>Document deficiencies on the OOS log; notify officer immediately if anything is safety-critical</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card col-card">
+      <div class="col-header navy">Crew Roles &mdash; Pre-Roll</div>
+      <div class="col-body">
+        <ul>
+          <li><strong>Officer:</strong> Confirms address, radio assignment, tactical worksheet</li>
+          <li><strong>FF1 (Backstep right):</strong> Attack line, irons, primary search</li>
+          <li><strong>FF2 (Backstep left):</strong> Hydrant, water supply, backup line</li>
+          <li><strong>DO:</strong> Best route, apparatus position, pump readiness</li>
+          <li><strong>All:</strong> Seatbelts before wheels move &mdash; non-negotiable</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card col-card">
+      <div class="col-header red">Common Pre-Roll Failures</div>
+      <div class="col-body">
+        <ul>
+          <li>Address not confirmed; rig rolls toward wrong cross street</li>
+          <li>SCBA not donned enroute &mdash; delays entry on arrival</li>
+          <li>Accountability tags forgotten</li>
+          <li>Cab doors not latched &mdash; warning chime ignored</li>
+          <li>Hose load left disturbed from previous call</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Driving with Due Regard</h3>
+      <ul>
+        <li><strong>Due regard</strong> &mdash; the legal duty to operate an emergency vehicle with the safety of all persons in mind, regardless of right-of-way granted by warning lights</li>
+        <li>Ohio Revised Code references:</li>
+      </ul>
+      <ul class="sub-list">
+        <li><strong>ORC 4511.03</strong> &mdash; Emergency vehicles must come to a complete stop before proceeding through any red signal or stop sign</li>
+        <li><strong>ORC 4511.041</strong> &mdash; The driver of an emergency vehicle is not relieved from the duty to operate the vehicle with due regard for the safety of all persons</li>
+      </ul>
+      <ul>
+        <li><strong>Code 3</strong> &mdash; lights and siren; <strong>Code 1</strong> &mdash; normal traffic flow, no warning devices</li>
+        <li>Intersection rules: stop, scan all four directions, make eye contact with civilian drivers, proceed lane-by-lane</li>
+        <li>Backing &mdash; never alone; spotter at left rear, two taps to stop, mirror sweeps every 5 seconds</li>
+        <li>Use the engine retarder/Jake brake on grades; ride the throttle, not the service brakes</li>
+        <li>Weight transfer in turns &mdash; reduce speed to 60% of posted limit on curves; full water tank shifts the center of gravity</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Communication &amp; Radio Awareness</h3>
+      <ul>
+        <li>Enroute &mdash; monitor dispatch and primary tactical channel; acknowledge updates</li>
+        <li>On arrival &mdash; the officer gives size-up; the DO listens for the water-supply call</li>
+        <li>Mark your hydrant on the radio: <em>"Engine 12 has a hydrant at Main and 5th, forward laying 200 feet of 5-inch."</em></li>
+        <li>Switch to the assigned tactical or fireground channel as directed</li>
+        <li>If command requests a water-supply update, give a number: PSI, GPM, or "tank water remaining"</li>
+        <li>If you hear a MAYDAY, stop non-essential traffic, dedicate a discharge to the RIT line, and report your readiness</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card col-card">
+      <div class="col-header navy">Storz Hydrant (5-inch LDH)</div>
+      <div class="col-body">
+        <ul>
+          <li>Sexless quarter-turn coupling &mdash; no male/female threads</li>
+          <li>Connect, rotate 1/4 turn clockwise, lock pin engages</li>
+          <li>Faster connection, less likely to cross-thread</li>
+          <li>Standard for forward-lay supply on most modern apparatus</li>
+          <li>Open hydrant slowly to charge supply line; full open after charged</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card col-card">
+      <div class="col-header red">Threaded Hydrant (NST/NH)</div>
+      <div class="col-body">
+        <ul>
+          <li>National Standard Thread &mdash; 4.5 inch steamer, two 2.5 inch outlets</li>
+          <li>Use hydrant wrench to remove cap and open valve</li>
+          <li>Hand-tight first &mdash; avoid cross-threading; finish with wrench, do not over-torque</li>
+          <li>Common in older systems; carry adapters (Storz-to-NST) for cross-compatibility</li>
+          <li>"Down to charge, up to shut" &mdash; nozzle convention to remember rotation direction</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Forward Lay vs Reverse Lay</h3>
+      <ul>
+        <li><strong>Forward lay</strong> &mdash; engine drops at the hydrant (FF2 jumps off), then drives to the fire laying supply line behind it</li>
+      </ul>
+      <ul class="sub-list">
+        <li>Engine arrives at scene fully positioned for attack</li>
+        <li>Best when hydrant is between dispatch route and the fire</li>
+      </ul>
+      <ul>
+        <li><strong>Reverse lay</strong> &mdash; engine arrives at fire, drops attack lines, then drives back to hydrant laying supply line</li>
+      </ul>
+      <ul class="sub-list">
+        <li>Useful when the hydrant is past the fire, or when a second engine establishes supply</li>
+        <li>Pump operator at the hydrant; another driver pumps the attack engine</li>
+      </ul>
+      <ul>
+        <li>Department SOP usually defines the default lay; deviation requires officer approval</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Apparatus Placement</h3>
+      <ul>
+        <li><strong>The first piece sets the geometry of the entire scene.</strong> Get it wrong and every truck after has to compensate</li>
+        <li>Position past the structure (about 25 feet) so the front of the rig clears the building &mdash; gives the truck company room to set up if a ladder is requested</li>
+        <li>Stay out of the collapse zone &mdash; minimum 1.5x building height for unstable structures</li>
+        <li>Check overhead &mdash; power lines, tree limbs, awnings; aerial apparatus needs vertical clearance</li>
+        <li>Egress &mdash; never block your own retreat; a second engine should be able to pass on at least one side</li>
+        <li>Wheels chocked, brake set, transmission in pump gear (or neutral with parking brake, per manufacturer)</li>
+        <li>Highway incidents &mdash; block one lane wider than your work area, wheels turned away from crew, scene lights toward oncoming traffic</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Pump Engagement &amp; Pressure Management</h3>
+      <ul>
+        <li>Sequence (typical midship pump):</li>
+      </ul>
+      <ul class="sub-list">
+        <li>Truck stopped, parking brake set</li>
+        <li>Transmission to <strong>neutral</strong></li>
+        <li>Pump shift switch to <strong>PUMP</strong> &mdash; wait for green "OK to pump" indicator</li>
+        <li>Transmission to <strong>DRIVE</strong> &mdash; rear wheels stay still, pump turns</li>
+        <li>Open tank-to-pump valve; pump now pressurized from booster tank</li>
+      </ul>
+      <ul>
+        <li>Charge attack line to target pressure (typical 1.75-inch handline at 100 PSI nozzle + friction loss)</li>
+        <li>Transition to hydrant supply: open intake gate slowly, close tank fill, monitor compound gauge for residual pressure</li>
+        <li>Use <strong>pressure governor</strong> mode (PSI) for handlines; <strong>RPM</strong> mode only for relay or master stream as SOP allows</li>
+        <li>Friction loss rule of thumb: FL = C &times; Q&sup2; &times; L (hydraulic calculator card on the panel for the engineer who isn't fast at math under stress)</li>
+        <li>Watch the gauges, not the fire &mdash; that's the FF1's job</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Generator, Lighting, &amp; Secondary Duties</h3>
+      <ul>
+        <li>Once water is flowing and pressure is stable, the engineer rotates to secondary duties:</li>
+      </ul>
+      <ul class="sub-list">
+        <li><strong>Scene lighting</strong> &mdash; deploy generator, raise the light tower, position cord reels for the interior crew</li>
+        <li><strong>Ladders</strong> &mdash; throw a ground ladder to a second-floor window for the search team's bailout</li>
+        <li><strong>Tools</strong> &mdash; stage irons, pike poles, K-12 saw, thermal imager at the front step</li>
+        <li><strong>SCBA bottles</strong> &mdash; pull spare bottles from the compartment, stage them at rehab</li>
+        <li><strong>Hydration</strong> &mdash; water bottles to crews coming off air; rehab area set up</li>
+        <li><strong>Salt / shovel</strong> &mdash; ice control around the rig and hose bed in winter</li>
+        <li><strong>Backup hose lines</strong> &mdash; pull a second 1.75 to the front door before it's needed</li>
+      </ul>
+      <ul>
+        <li>Every minute spent setting up secondaries early saves three minutes when command asks for them</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-block card">
+    <div class="card-body">
+      <h3>Pump Operator as Command's Eyes</h3>
+      <ul>
+        <li>The DO has the only continuous 360-degree view of the building once interior crews go inside</li>
+        <li>Report changes to command:</li>
+      </ul>
+      <ul class="sub-list">
+        <li>Smoke conditions changing color, volume, velocity, density (the four attributes of fire behavior)</li>
+        <li>Fire showing in new openings</li>
+        <li>Structural movement &mdash; sagging eaves, spalling brick, settling porch</li>
+        <li>Civilian arrival or self-evacuation</li>
+        <li>Approaching apparatus or police, blocked egress, downed power lines</li>
+      </ul>
+      <ul>
+        <li>Water supply forecasting &mdash; if your tank is at 25% and you're not on a hydrant yet, that's a command notification, not a panic</li>
+        <li>RIT-line readiness &mdash; one discharge gated and pre-charged for MAYDAY response, ready instantly</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== QUIZ ===== -->
+<section id="quiz" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+      Assessment
+    </div>
+    <h2 class="section-title">Quiz</h2>
+    <p class="section-desc">Select your answers, then check your score.</p>
+  </div>
+
+  <div id="scoreBanner" class="score-banner"></div>
+
+  <div class="quiz-q card" data-correct="2"><div class="card-body"><h4><span class="q-num">01</span> Which NFPA standard governs Fire Apparatus Driver/Operator Professional Qualifications?</h4><div class="choices"><div class="choice" data-idx="0">A) NFPA 1001</div><div class="choice" data-idx="1">B) NFPA 1041</div><div class="choice" data-idx="2">C) NFPA 1002</div><div class="choice" data-idx="3">D) NFPA 1500</div></div><div class="answer-reveal">C) NFPA 1002</div></div></div>
+
+  <div class="quiz-q card" data-correct="1"><div class="card-body"><h4><span class="q-num">02</span> "Due regard" means the emergency vehicle driver must:</h4><div class="choices"><div class="choice" data-idx="0">A) Always have right of way under lights and siren</div><div class="choice" data-idx="1">B) Operate with the safety of all persons in mind regardless of warning devices</div><div class="choice" data-idx="2">C) Drive at any speed necessary to reach the call</div><div class="choice" data-idx="3">D) Never stop at red lights when responding</div></div><div class="answer-reveal">B) Operate with the safety of all persons in mind regardless of warning devices</div></div></div>
+
+  <div class="quiz-q card" data-correct="0"><div class="card-body"><h4><span class="q-num">03</span> A Storz coupling connects to a hydrant by:</h4><div class="choices"><div class="choice" data-idx="0">A) A quarter turn clockwise &mdash; sexless coupling, no threads</div><div class="choice" data-idx="1">B) Five full clockwise turns with a hydrant wrench</div><div class="choice" data-idx="2">C) Threading the male end into the female outlet</div><div class="choice" data-idx="3">D) A friction-fit clamp tightened with a strap wrench</div></div><div class="answer-reveal">A) A quarter turn clockwise &mdash; sexless coupling, no threads</div></div></div>
+
+  <div class="quiz-q card" data-correct="0"><div class="card-body"><h4><span class="q-num">04</span> In a forward lay, the engine:</h4><div class="choices"><div class="choice" data-idx="0">A) Drops a firefighter at the hydrant, then drives to the fire laying supply line behind it</div><div class="choice" data-idx="1">B) Arrives at the fire first, then drives back to the hydrant</div><div class="choice" data-idx="2">C) Pumps from tank water only, never connecting to a hydrant</div><div class="choice" data-idx="3">D) Stages two blocks away and waits for command</div></div><div class="answer-reveal">A) Drops a firefighter at the hydrant, then drives to the fire laying supply line behind it</div></div></div>
+
+  <div class="quiz-q card" data-correct="2"><div class="card-body"><h4><span class="q-num">05</span> A typical 1.75-inch handline is supplied at what nozzle pressure (smooth-bore not used)?</h4><div class="choices"><div class="choice" data-idx="0">A) 50 PSI</div><div class="choice" data-idx="1">B) 75 PSI</div><div class="choice" data-idx="2">C) 100 PSI</div><div class="choice" data-idx="3">D) 150 PSI</div></div><div class="answer-reveal">C) 100 PSI</div></div></div>
+
+  <div class="quiz-q card" data-correct="1"><div class="card-body"><h4><span class="q-num">06</span> When backing the apparatus, the spotter should be positioned:</h4><div class="choices"><div class="choice" data-idx="0">A) At the front bumper</div><div class="choice" data-idx="1">B) At the left rear of the apparatus, in the driver's mirror sight line</div><div class="choice" data-idx="2">C) Inside the cab giving verbal directions</div><div class="choice" data-idx="3">D) Wherever convenient &mdash; backing alone is acceptable in an empty bay</div></div><div class="answer-reveal">B) At the left rear of the apparatus, in the driver's mirror sight line</div></div></div>
+
+  <div class="quiz-q card" data-correct="2"><div class="card-body"><h4><span class="q-num">07</span> The correct sequence for engaging a midship pump is:</h4><div class="choices"><div class="choice" data-idx="0">A) Drive &rarr; Pump shift &rarr; Park brake &rarr; Tank-to-pump</div><div class="choice" data-idx="1">B) Pump shift &rarr; Drive &rarr; Park brake &rarr; Tank-to-pump</div><div class="choice" data-idx="2">C) Park brake &rarr; Neutral &rarr; Pump shift &rarr; Drive &rarr; Tank-to-pump</div><div class="choice" data-idx="3">D) Tank-to-pump &rarr; Pump shift &rarr; Drive &rarr; Park brake</div></div><div class="answer-reveal">C) Park brake &rarr; Neutral &rarr; Pump shift &rarr; Drive &rarr; Tank-to-pump</div></div></div>
+
+  <div class="quiz-q card" data-correct="3"><div class="card-body"><h4><span class="q-num">08</span> When positioning the engine at a residential structure fire, you should:</h4><div class="choices"><div class="choice" data-idx="0">A) Stop directly in front of the door for shortest hose stretch</div><div class="choice" data-idx="1">B) Park on the lawn for stability</div><div class="choice" data-idx="2">C) Pull into the driveway and block the truck company</div><div class="choice" data-idx="3">D) Pull approximately 25 feet past the structure to leave room for the truck company</div></div><div class="answer-reveal">D) Pull approximately 25 feet past the structure to leave room for the truck company</div></div></div>
+
+  <div class="quiz-q card" data-correct="1"><div class="card-body"><h4><span class="q-num">09</span> Which of the following is NOT a typical secondary duty of the engineer once water is flowing?</h4><div class="choices"><div class="choice" data-idx="0">A) Throwing ground ladders for crew bailout</div><div class="choice" data-idx="1">B) Conducting interior primary search</div><div class="choice" data-idx="2">C) Staging spare SCBA bottles at rehab</div><div class="choice" data-idx="3">D) Pulling a backup 1.75-inch line to the front door</div></div><div class="answer-reveal">B) Conducting interior primary search</div></div></div>
+
+  <div class="quiz-q card" data-correct="2"><div class="card-body"><h4><span class="q-num">10</span> The four attributes of fire behavior the pump operator should report to command are:</h4><div class="choices"><div class="choice" data-idx="0">A) Heat, light, smoke, sound</div><div class="choice" data-idx="1">B) Color, smell, texture, temperature</div><div class="choice" data-idx="2">C) Volume, velocity, density, color</div><div class="choice" data-idx="3">D) Speed, height, angle, distance</div></div><div class="answer-reveal">C) Volume, velocity, density, color</div></div></div>
+
+  <div class="quiz-actions">
+    <button class="btn btn-primary" onclick="checkQuiz()">Check Answers</button>
+    <button class="btn btn-ghost" onclick="resetQuiz()">Reset</button>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== EVALUATION ===== -->
+<section id="evaluation" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      Evaluate
+    </div>
+    <h2 class="section-title">Student Evaluation</h2>
+    <p class="section-desc">Rate the presentation. 1 = Poor, 5 = Excellent.</p>
+  </div>
+
+  <form id="evalForm">
+    <div class="card eval-section">
+      <h3>Content &amp; Organization</h3>
+      <table class="eval-table">
+        <thead><tr><th>Criteria</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Learning objectives were clearly stated</td><td><input type="radio" name="e1" value="1"></td><td><input type="radio" name="e1" value="2"></td><td><input type="radio" name="e1" value="3"></td><td><input type="radio" name="e1" value="4"></td><td><input type="radio" name="e1" value="5"></td></tr>
+          <tr><td>Content was well-organized and easy to follow</td><td><input type="radio" name="e2" value="1"></td><td><input type="radio" name="e2" value="2"></td><td><input type="radio" name="e2" value="3"></td><td><input type="radio" name="e2" value="4"></td><td><input type="radio" name="e2" value="5"></td></tr>
+          <tr><td>Material was relevant to driver/operator certification</td><td><input type="radio" name="e3" value="1"></td><td><input type="radio" name="e3" value="2"></td><td><input type="radio" name="e3" value="3"></td><td><input type="radio" name="e3" value="4"></td><td><input type="radio" name="e3" value="5"></td></tr>
+          <tr><td>Sufficient detail was provided on pump operations</td><td><input type="radio" name="e4" value="1"></td><td><input type="radio" name="e4" value="2"></td><td><input type="radio" name="e4" value="3"></td><td><input type="radio" name="e4" value="4"></td><td><input type="radio" name="e4" value="5"></td></tr>
+          <tr><td>NFPA 1002 alignment was clear</td><td><input type="radio" name="e5" value="1"></td><td><input type="radio" name="e5" value="2"></td><td><input type="radio" name="e5" value="3"></td><td><input type="radio" name="e5" value="4"></td><td><input type="radio" name="e5" value="5"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card eval-section">
+      <h3>Delivery &amp; Presentation Skills</h3>
+      <table class="eval-table">
+        <thead><tr><th>Criteria</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Instructor spoke clearly and at appropriate pace</td><td><input type="radio" name="e6" value="1"></td><td><input type="radio" name="e6" value="2"></td><td><input type="radio" name="e6" value="3"></td><td><input type="radio" name="e6" value="4"></td><td><input type="radio" name="e6" value="5"></td></tr>
+          <tr><td>Eye contact and engagement with audience</td><td><input type="radio" name="e7" value="1"></td><td><input type="radio" name="e7" value="2"></td><td><input type="radio" name="e7" value="3"></td><td><input type="radio" name="e7" value="4"></td><td><input type="radio" name="e7" value="5"></td></tr>
+          <tr><td>Effective use of visual aids and apparatus diagrams</td><td><input type="radio" name="e8" value="1"></td><td><input type="radio" name="e8" value="2"></td><td><input type="radio" name="e8" value="3"></td><td><input type="radio" name="e8" value="4"></td><td><input type="radio" name="e8" value="5"></td></tr>
+          <tr><td>Instructor demonstrated subject knowledge</td><td><input type="radio" name="e9" value="1"></td><td><input type="radio" name="e9" value="2"></td><td><input type="radio" name="e9" value="3"></td><td><input type="radio" name="e9" value="4"></td><td><input type="radio" name="e9" value="5"></td></tr>
+          <tr><td>Time was managed well within 45 minutes</td><td><input type="radio" name="e10" value="1"></td><td><input type="radio" name="e10" value="2"></td><td><input type="radio" name="e10" value="3"></td><td><input type="radio" name="e10" value="4"></td><td><input type="radio" name="e10" value="5"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card eval-section">
+      <h3>Instructional Materials</h3>
+      <table class="eval-table">
+        <thead><tr><th>Criteria</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Slides were professional and easy to read</td><td><input type="radio" name="e11" value="1"></td><td><input type="radio" name="e11" value="2"></td><td><input type="radio" name="e11" value="3"></td><td><input type="radio" name="e11" value="4"></td><td><input type="radio" name="e11" value="5"></td></tr>
+          <tr><td>Apparatus and hydrant illustrations were helpful</td><td><input type="radio" name="e12" value="1"></td><td><input type="radio" name="e12" value="2"></td><td><input type="radio" name="e12" value="3"></td><td><input type="radio" name="e12" value="4"></td><td><input type="radio" name="e12" value="5"></td></tr>
+          <tr><td>Handouts/quiz were appropriate and useful</td><td><input type="radio" name="e13" value="1"></td><td><input type="radio" name="e13" value="2"></td><td><input type="radio" name="e13" value="3"></td><td><input type="radio" name="e13" value="4"></td><td><input type="radio" name="e13" value="5"></td></tr>
+          <tr><td>Sources and references were properly cited</td><td><input type="radio" name="e14" value="1"></td><td><input type="radio" name="e14" value="2"></td><td><input type="radio" name="e14" value="3"></td><td><input type="radio" name="e14" value="4"></td><td><input type="radio" name="e14" value="5"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="eval-feedback">
+        <label class="eval-label">What was the most valuable thing you learned?</label>
+        <textarea class="eval-textarea" name="fb1" placeholder="Your response..."></textarea>
+        <label class="eval-label">What could the instructor improve?</label>
+        <textarea class="eval-textarea" name="fb2" placeholder="Your response..."></textarea>
+        <label class="eval-label">Additional comments or suggestions?</label>
+        <textarea class="eval-textarea" name="fb3" placeholder="Your response..."></textarea>
+
+        <button type="submit" class="btn btn-primary">Submit Evaluation</button>
+        <div id="evalSuccess" class="form-success">Thank you! Your evaluation has been submitted.</div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== QR CODES ===== -->
+<section id="qrcodes" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Quick Access
+    </div>
+    <h2 class="section-title">QR Codes</h2>
+    <p class="section-desc">Display on screen or print for audience access.</p>
+  </div>
+  <div class="qr-grid">
+    <div class="card qr-item"><div class="card-body"><img src="capstone-2/QR-nfpa-1002.png" alt="QR: NFPA 1002"><div class="qr-label">NFPA 1002 Standard</div><div class="qr-url">nfpa.org/1002</div></div></div>
+    <div class="card qr-item"><div class="card-body"><img src="capstone-2/QR-orc-4511.png" alt="QR: ORC 4511"><div class="qr-label">ORC 4511 (Driving)</div><div class="qr-url">codes.ohio.gov/orc/4511</div></div></div>
+    <div class="card qr-item"><div class="card-body"><img src="capstone-2/QR-iaff-driver.png" alt="QR: IAFF Driver Resources"><div class="qr-label">USFA Driver Safety</div><div class="qr-url">usfa.fema.gov</div></div></div>
+    <div class="card qr-item"><div class="card-body"><img src="capstone-2/QR-quiz.png" alt="QR: Quiz"><div class="qr-label">Take the Quiz</div><div class="qr-url">#quiz</div></div></div>
+    <div class="card qr-item"><div class="card-body"><img src="capstone-2/QR-evaluation.png" alt="QR: Evaluation"><div class="qr-label">Submit Evaluation</div><div class="qr-url">#evaluation</div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== REFERENCES ===== -->
+<section id="references" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      Citations
+    </div>
+    <h2 class="section-title">References</h2>
+  </div>
+  <div class="card ref-card">
+    <ol class="ref-list">
+      <li>National Fire Protection Association. (2024). <em>NFPA 1002: Standard for Fire Apparatus Driver/Operator Professional Qualifications.</em> <a href="https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=1002" target="_blank" rel="noopener">nfpa.org/1002</a></li>
+      <li>National Fire Protection Association. (2022). <em>NFPA 1901: Standard for Automotive Fire Apparatus.</em> <a href="https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=1901" target="_blank" rel="noopener">nfpa.org/1901</a></li>
+      <li>Ohio Revised Code. <em>Section 4511.03 &mdash; Emergency Vehicles at Red Signals.</em> <a href="https://codes.ohio.gov/ohio-revised-code/section-4511.03" target="_blank" rel="noopener">codes.ohio.gov/orc/4511.03</a></li>
+      <li>Ohio Revised Code. <em>Section 4511.041 &mdash; Due Regard for Safety.</em> <a href="https://codes.ohio.gov/ohio-revised-code/section-4511.041" target="_blank" rel="noopener">codes.ohio.gov/orc/4511.041</a></li>
+      <li>U.S. Fire Administration. (2017). <em>Emergency Vehicle Safe Operations for Volunteer and Small Combination Fire Departments.</em> <a href="https://www.usfa.fema.gov/downloads/pdf/publications/emergency_vehicle_safe_operations.pdf" target="_blank" rel="noopener">usfa.fema.gov/.../emergency_vehicle_safe_operations.pdf</a></li>
+      <li>International Fire Service Training Association. (2022). <em>Pumping Apparatus Driver/Operator Handbook</em> (4th ed.). Fire Protection Publications, Oklahoma State University.</li>
+      <li>Ohio Division of EMS. (n.d.). <em>Firefighter I &amp; II Course Packet.</em> <a href="https://dam.assets.ohio.gov/image/upload/ems.ohio.gov/links/ems0315.pdf" target="_blank" rel="noopener">dam.assets.ohio.gov/.../ems0315.pdf</a></li>
+      <li>National Institute for Occupational Safety and Health. <em>Fire Fighter Fatality Investigation and Prevention Program.</em> <a href="https://www.cdc.gov/niosh/fire-fighters/" target="_blank" rel="noopener">cdc.gov/niosh/fire-fighters</a></li>
+    </ol>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== FEEDBACK ===== -->
+<section id="feedback" class="animate-in">
+  <div class="section-header">
+    <div class="section-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Review
+    </div>
+    <h2 class="section-title">Feedback</h2>
+    <p class="section-desc">Leave comments, suggestions, or corrections on any part of the package.</p>
+  </div>
+  <div class="card feedback-card">
+    <div class="card-body">
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-input" name="name" placeholder="Optional">
+        </div>
+        <div class="form-group">
+          <label>Overall Impression</label>
+          <textarea class="form-input" name="message" placeholder="How does the presentation look? Any content to add, remove, or change?"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Specific Slide or Section Feedback</label>
+          <textarea class="form-input" name="specifics" placeholder="E.g., 'The pump engagement section could use more detail on relay pumping'"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Feedback</button>
+      </form>
+      <div id="feedbackSuccess" class="form-success">Feedback sent! Thank you for the review.</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Mileage Design</div>
+  <p>Initial Fire Engineer / Pump Operations &mdash; Capstone 02 Presentation Package</p>
+  <p>NFPA 1002 &mdash; Fire Apparatus Driver/Operator Professional Qualifications</p>
+</footer>
+
+<script src="shared/app.js"></script>
+
+</body>
+</html>
