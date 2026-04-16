@@ -774,15 +774,15 @@
     /* ===== QR ===== */
     .qr-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
     }
     @media (max-width: 600px) { .qr-grid { grid-template-columns: 1fr; } }
     .qr-item { text-align: center; }
-    .qr-item .card-body { padding: 1.5rem; }
+    .qr-item .card-body { padding: 1.25rem; }
     .qr-item img {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: var(--radius-btn);
       margin-bottom: 0.75rem;
       border: 1px solid var(--border);
@@ -1424,6 +1424,8 @@
     <div class="card qr-item"><div class="card-body"><img src="QR-ems-ohio-gov.png" alt="QR: ems.ohio.gov"><div class="qr-label">Ohio Division of EMS</div><div class="qr-url">ems.ohio.gov</div></div></div>
     <div class="card qr-item"><div class="card-body"><img src="QR-oac-4765.png" alt="QR: OAC 4765"><div class="qr-label">OAC Chapter 4765</div><div class="qr-url">codes.ohio.gov/oac/4765</div></div></div>
     <div class="card qr-item"><div class="card-body"><img src="QR-cert-verification.png" alt="QR: Verification"><div class="qr-label">Cert Verification</div><div class="qr-url">services.dps.ohio.gov</div></div></div>
+    <div class="card qr-item"><div class="card-body"><img src="QR-quiz.png" alt="QR: Quiz"><div class="qr-label">Take the Quiz</div><div class="qr-url">#quiz</div></div></div>
+    <div class="card qr-item"><div class="card-body"><img src="QR-evaluation.png" alt="QR: Evaluation"><div class="qr-label">Submit Evaluation</div><div class="qr-url">#evaluation</div></div></div>
   </div>
 </section>
 
